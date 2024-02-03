@@ -1,0 +1,33 @@
+/* Footer.module.scss */
+
+.footer {
+    background-color: #93c11f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .contactInfo {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .contactInfo div {
+    flex: 1;
+    padding: 0 10px;
+  }
+  
+  .contactInfo h3 {
+    margin-bottom: 10px;
+  }
+
+  .footerBottom {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .footerBottom p {
+    margin: 0;
+  }
