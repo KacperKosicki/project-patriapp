@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
 
-function App() {
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './components/features/Login/Login';
+import WorkerPanel from './components/features/WorkerPanel/WorkerPanel';
+
+const App = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
+
+  const handleLogin = (user) => {
+    setCurrentUser(user);
+    setLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    setLoggedIn(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login onLogin={handleLogin} />} />
+        <Route
+          path="/worker/:login"
+          element={loggedIn ? <WorkerPanel currentUser={currentUser} onLogout={handleLogout} /> : <Navigate to="/login" />}
+        />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

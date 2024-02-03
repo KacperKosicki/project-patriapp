@@ -1,0 +1,32 @@
+[
+    { 
+        "login": "kacper.kosicki", 
+        "password": "password1", 
+        "pin": "1234",
+        "imie": "Kacper",
+        "nazwisko": "Kosicki",
+        "wiek": 35,
+        "placa_na_godzine": 25,
+        "stanowisko": "Operator maszyn i urządzeń do obróbki drewna"
+    },
+    { 
+        "login": "celina.snella", 
+        "password": "password2", 
+        "pin": "5678",
+        "imie": "Celina",
+        "nazwisko": "Snella",
+        "wiek": 28,
+        "placa_na_godzine": 30,
+        "stanowisko": "Specjalista ds. Marketingu"
+    },
+    { 
+        "login": "patryk.pikula", 
+        "password": "password3", 
+        "pin": "9876",
+        "imie": "Patryk",
+        "nazwisko": "Pikula",
+        "wiek": 40,
+        "placa_na_godzine": 20,
+        "stanowisko": "Księgowy"
+    }
+]
