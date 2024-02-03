@@ -1,6 +1,7 @@
 [
     { 
-        "login": "kacper.kosicki", 
+        "login": "kacper.kosicki",
+        "number": 172,
         "password": "password1", 
         "pin": "1234",
         "imie": "Kacper",
@@ -11,6 +12,7 @@
     },
     { 
         "login": "celina.snella", 
+        "number": 173,
         "password": "password2", 
         "pin": "5678",
         "imie": "Celina",
@@ -21,6 +23,7 @@
     },
     { 
         "login": "patryk.pikula", 
+        "number": 174,
         "password": "password3", 
         "pin": "9876",
         "imie": "Patryk",

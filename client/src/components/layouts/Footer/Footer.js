@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.footerBottom}>
-        <p>© 2024 Nazwa Twojej Firmy. Wszelkie prawa zastrzeżone.</p>
+        <p>© 2024 Patria-Top Sp. z o.o. | Wszelkie prawa zastrzeżone.</p>
       </div>
     </footer>
   );
