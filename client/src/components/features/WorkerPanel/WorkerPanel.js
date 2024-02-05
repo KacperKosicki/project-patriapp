@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import workersData from '../../../workers.json';
+import styles from './WorkerPanel.module.scss'; // Importuj plik ze stylami SCSS
+import Banner from '../../pages/Banner/Banner';
+import Footer from '../../layouts/Footer/Footer';
+import NavBar from '../../layouts/NavBar/NavBar';
 
 const WorkerPanel = () => {
   const { login } = useParams();
@@ -8,28 +12,30 @@ const WorkerPanel = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    // Logika autoryzacji - wywoływana tylko raz po załadowaniu komponentu
     const checkCredentials = () => {
-      // Tutaj umieść logikę autoryzacji, która ustawia isAuthenticated na true lub false
-      // Na przykład: Sprawdź dane logowania, tokeny, ciasteczka itp.
-      setIsAuthenticated(true); // Przykładowa ustawienie autoryzacji na true
+      setIsAuthenticated(true);
     };
 
-    checkCredentials(); // Wywołanie funkcji sprawdzającej autoryzację
-  }, []); // Pusta zależność, żeby useEffect wywołał się tylko raz po załadowaniu komponentu
+    checkCredentials();
+  }, []);
 
   return (
-    <div>
-      <h2>Panel Pracownika</h2>
-      {isAuthenticated && worker && (
-        <div>
-          <p><strong>Imię:</strong> {worker.imie}</p>
-          <p><strong>Nazwisko:</strong> {worker.nazwisko}</p>
-          <p><strong>Wiek:</strong> {worker.wiek}</p>
-          <p><strong>Płaca na godzinę:</strong> {worker.placa_na_godzine}</p>
-          <p><strong>Stanowisko:</strong> {worker.stanowisko}</p>
-        </div>
-      )}
+    <div className={styles.workerPanelWrapper}>
+      <Banner imagePath="/images/patria-logo.png" link="https://patria-top.com.pl/" />
+      <NavBar />
+      <div className={styles.workerPanelContainer}>
+        <h2 className={styles.workerPanelHeader}>Panel Pracownika</h2>
+        {isAuthenticated && worker && (
+          <div className={styles.workerPanelContent}>
+            <p><strong>Imię:</strong> {worker.imie}</p>
+            <p><strong>Nazwisko:</strong> {worker.nazwisko}</p>
+            <p><strong>Wiek:</strong> {worker.wiek}</p>
+            <p><strong>Płaca na godzinę:</strong> {worker.placa_na_godzine}</p>
+            <p><strong>Stanowisko:</strong> {worker.stanowisko}</p>
+          </div>
+        )}
+      </div>
+      <Footer />
     </div>
   );
 };

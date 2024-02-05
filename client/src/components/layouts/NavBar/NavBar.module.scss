@@ -1,0 +1,35 @@
+.navBar {
+    padding: 10px 20px; /* Wewnętrzne odstępy */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-width: 500px;
+  }
+  
+  .navList {
+    list-style-type: none; /* Usunięcie standardowych punktorów */
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navList li {
+    margin-right: 20px; /* Odstęp między elementami */
+
+  }
+  
+  .navList li:last-child {
+    margin-right: 0; /* Usunięcie marginesu dla ostatniego elementu */
+  }
+  
+  .navList li a {
+    text-decoration: none; /* Usunięcie podkreślenia */
+    font-weight: 500; /* Pogrubienie tekstu */
+    transition: color 0.3s; /* Animacja zmiany koloru */
+    color: #93c11f;
+  }
+  
+  .navList li a:hover {
+    color: #93c11f; /* Kolor tekstu po najechaniu */
+    font-weight: bold;
+  }

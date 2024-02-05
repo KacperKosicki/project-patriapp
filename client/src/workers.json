@@ -6,8 +6,8 @@
         "pin": "1234",
         "imie": "Kacper",
         "nazwisko": "Kosicki",
-        "wiek": 35,
-        "placa_na_godzine": 25,
+        "wiek": 22,
+        "placa_na_godzine": 27.80,
         "stanowisko": "Operator maszyn i urządzeń do obróbki drewna"
     },
     { 
@@ -17,9 +17,9 @@
         "pin": "5678",
         "imie": "Celina",
         "nazwisko": "Snella",
-        "wiek": 28,
-        "placa_na_godzine": 30,
-        "stanowisko": "Specjalista ds. Marketingu"
+        "wiek": 22,
+        "placa_na_godzine": "x",
+        "stanowisko": "Specjalista ds. gospodarki magazynowej"
     },
     { 
         "login": "patryk.pikula", 
@@ -28,8 +28,8 @@
         "pin": "9876",
         "imie": "Patryk",
         "nazwisko": "Pikula",
-        "wiek": 40,
-        "placa_na_godzine": 20,
-        "stanowisko": "Księgowy"
+        "wiek": 22,
+        "placa_na_godzine": 29.70,
+        "stanowisko": "Operator maszyn i urządzeń do obróbki drewna"
     }
 ]

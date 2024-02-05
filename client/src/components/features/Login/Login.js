@@ -73,7 +73,7 @@ const Login = ({ onLogin }) => {
             </label>
             <input type="password" id="pin" name="pin" value={loginData.pin} onChange={handleInputChange} placeholder="Podaj PIN" />
           </div>
-          {error && <p className={styles.error}>{error}</p>} {/* Wyświetlenie komunikatu o błędzie */}
+          {error && <p className={styles.error}>{error}</p>}
           {notification && (
             <div className={styles.notification}>
               <h3>Uwaga</h3>
