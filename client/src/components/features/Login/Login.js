@@ -39,11 +39,11 @@ const Login = ({ onLogin }) => {
     if (user) {
       onLogin(user);
       setError(''); // Usunięcie komunikatu błędu po poprawnym zalogowaniu
-      setNotification('W celu bezpieczeństwa, jeśli w swoim panelu odświeżysz stronę, zostaniesz przeniesiony do systemu logowania. Trwa łączenie z Twoim panelem...');
+      setNotification('W celu bezpieczeństwa, jeśli w swoim panelu odświeżysz stronę, zostaniesz przeniesiony do systemu logowania.');
       setTimeout(() => {
         setNotification('');
         navigate(`/worker/${user.login}`); // Tu jest użycie user.login, które połączy login z numerem
-      }, 7000); // 7000 milisekund = 7 sekund
+      }, 10000); // 10000 milisekund = 10 sekund
     } else {
       setError('Niepoprawne dane logowania');
     }
@@ -76,7 +76,7 @@ const Login = ({ onLogin }) => {
           {error && <p className={styles.error}>{error}</p>}
           {notification && (
             <div className={styles.notification}>
-              <h3>Uwaga</h3>
+              <h4>Trwa łączenie z Twoim panelem...</h4>
               <p>{notification}</p>
             </div>
           )} {/* Wyświetlenie komunikatu o powiadomieniu */}

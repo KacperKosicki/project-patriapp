@@ -8,7 +8,8 @@
         "nazwisko": "Kosicki",
         "wiek": 22,
         "placa_na_godzine": 27.80,
-        "stanowisko": "Operator maszyn i urządzeń do obróbki drewna"
+        "stanowisko": "Operator maszyn i urządzeń do obróbki drewna",
+        "dni_urlopu": 10
     },
     { 
         "login": "celina.snella", 
@@ -19,7 +20,8 @@
         "nazwisko": "Snella",
         "wiek": 22,
         "placa_na_godzine": "x",
-        "stanowisko": "Specjalista ds. gospodarki magazynowej"
+        "stanowisko": "Specjalista ds. gospodarki magazynowej",
+        "dni_urlopu": 10
     },
     { 
         "login": "patryk.pikula", 
@@ -30,6 +32,7 @@
         "nazwisko": "Pikula",
         "wiek": 22,
         "placa_na_godzine": 29.70,
-        "stanowisko": "Operator maszyn i urządzeń do obróbki drewna"
+        "stanowisko": "Operator maszyn i urządzeń do obróbki drewna",
+        "dni_urlopu": 10
     }
 ]

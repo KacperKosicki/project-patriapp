@@ -8,20 +8,12 @@
 }
 
 .workerPanelContainer {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .workerPanelHeader {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-  }
+  width: 80%; /* Ustawienie szerokości na 100% */
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center; /* Wyśrodkowanie zawartości w poziomie */
+}
   
   .workerPanelContent {
     margin-bottom: 20px;
@@ -37,4 +29,21 @@
   
   .workerPanelContent p:last-child {
     margin-bottom: 0;
+  }
+
+  .column {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: calc(30% - 20px); /* Ustawienie szerokości na około 30% z uwzględnieniem marginesów */
+    margin-right: 20px; /* Margines między kolumnami */
+    vertical-align: top; /* Wyrównanie do góry */
+  }
+
+  .workerPanelContent {
+    width: 100%; /* Ustawienie szerokości na 100% */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }

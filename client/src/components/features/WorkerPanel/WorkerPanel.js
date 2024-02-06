@@ -24,14 +24,25 @@ const WorkerPanel = () => {
       <Banner imagePath="/images/patria-logo.png" link="https://patria-top.com.pl/" />
       <NavBar />
       <div className={styles.workerPanelContainer}>
-        <h2 className={styles.workerPanelHeader}>Panel Pracownika</h2>
         {isAuthenticated && worker && (
           <div className={styles.workerPanelContent}>
-            <p><strong>Imię:</strong> {worker.imie}</p>
-            <p><strong>Nazwisko:</strong> {worker.nazwisko}</p>
-            <p><strong>Wiek:</strong> {worker.wiek}</p>
-            <p><strong>Płaca na godzinę:</strong> {worker.placa_na_godzine}</p>
-            <p><strong>Stanowisko:</strong> {worker.stanowisko}</p>
+            <div className={styles.column}>
+              <h3>---- GŁÓWNE DANE ----</h3>
+              <p><strong>Imię:</strong> {worker.imie}</p>
+              <p><strong>Nazwisko:</strong> {worker.nazwisko}</p>
+              <p><strong>Wiek:</strong> {worker.wiek}</p>
+              <p><strong>Płaca na godzinę:</strong> {worker.placa_na_godzine}</p>
+              <p><strong>Stanowisko:</strong> {worker.stanowisko}</p>
+            </div>
+            <div className={styles.column}>
+              <h3>---- URLOPY ----</h3>
+              {/* Tutaj wstaw logikę związana z urlopami pracownika */}
+              <p><strong>Pozostało dni urlopu:</strong> {worker.dni_urlopu}</p>
+            </div>
+            <div className={styles.column}>
+              <h3>---- INNE ----</h3>
+              {/* Tutaj wstaw inne informacje na temat pracownika */}
+            </div>
           </div>
         )}
       </div>
