@@ -26,22 +26,20 @@ const WorkerPanel = () => {
       <div className={styles.workerPanelContainer}>
         {isAuthenticated && worker && (
           <div className={styles.workerPanelContent}>
-            <div className={styles.column}>
-              <h3>---- GŁÓWNE DANE ----</h3>
-              <p><strong>Imię:</strong> {worker.imie}</p>
-              <p><strong>Nazwisko:</strong> {worker.nazwisko}</p>
-              <p><strong>Wiek:</strong> {worker.wiek}</p>
-              <p><strong>Płaca na godzinę:</strong> {worker.placa_na_godzine}</p>
-              <p><strong>Stanowisko:</strong> {worker.stanowisko}</p>
+            <div className={styles.profileImage}>
+              <img src={worker.zdjecie} alt="Zdjęcie pracownika" />
             </div>
-            <div className={styles.column}>
-              <h3>---- URLOPY ----</h3>
-              {/* Tutaj wstaw logikę związana z urlopami pracownika */}
-              <p><strong>Pozostało dni urlopu:</strong> {worker.dni_urlopu}</p>
-            </div>
-            <div className={styles.column}>
-              <h3>---- INNE ----</h3>
-              {/* Tutaj wstaw inne informacje na temat pracownika */}
+            <div className={styles.infoColumn}>
+              <p><strong>Imię:</strong> <span>{worker.imie}</span></p>
+              <p><strong>Nazwisko:</strong> <span>{worker.nazwisko}</span></p>
+              <p><strong>Wiek:</strong> <span>{worker.wiek}</span></p>
+              <p><strong>Płaca na godzinę:</strong> <span>{worker.placa_na_godzine}</span></p>
+              <p><strong>Stanowisko:</strong> <span>{worker.stanowisko}</span></p>
+              <p><strong>Pozostało dni urlopu:</strong> <span>{worker.dni_urlopu}</span></p>
+              <div className={styles.buttonContainer}>
+                <button className={styles.changeProfile}>EDYTUJ PROFIL</button>
+                <button className={styles.deleteAccount}>USUŃ PROFIL</button>
+              </div>
             </div>
           </div>
         )}

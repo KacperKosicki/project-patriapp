@@ -4,46 +4,88 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 0 auto;
+  min-height: 100vh;
 }
 
 .workerPanelContainer {
-  width: 80%; /* Ustawienie szerokości na 100% */
+  width: 80%;
   padding: 20px;
   margin-bottom: 20px;
-  display: flex;
-  justify-content: center; /* Wyśrodkowanie zawartości w poziomie */
 }
-  
-  .workerPanelContent {
-    margin-bottom: 20px;
-  }
-  
-  .workerPanelContent p {
-    margin-bottom: 10px;
-  }
-  
-  .workerPanelContent strong {
-    font-weight: bold;
-  }
-  
-  .workerPanelContent p:last-child {
-    margin-bottom: 0;
-  }
 
-  .column {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 20px;
-    width: calc(30% - 20px); /* Ustawienie szerokości na około 30% z uwzględnieniem marginesów */
-    margin-right: 20px; /* Margines między kolumnami */
-    vertical-align: top; /* Wyrównanie do góry */
-  }
+.workerPanelContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .workerPanelContent {
-    width: 100%; /* Ustawienie szerokości na 100% */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+.profileImage {
+  width: 100%;
+  max-width: 35%; // Maksymalna szerokość zdjęcia - 50% szerokości kontenera
+  max-height: 60vh; // Maksymalna wysokość zdjęcia - 50% wysokości widoku
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex; /* Dodajemy flex, aby centrować zdjęcie */
+  justify-content: center; /* Centrujemy w poziomie */
+  align-items: center; /* Centrujemy w pionie */
+}
+
+.profileImage img {
+  max-width: 100%; // Maksymalna szerokość zdjęcia - 100% szerokości kontenera
+  max-height: 100%; // Maksymalna wysokość zdjęcia - 100% wysokości kontenera
+  object-fit: contain; /* Zachowaj proporcje obrazu */
+}
+
+.infoColumn {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 35%; // Zmniejszenie szerokości sekcji z informacjami
+  box-sizing: border-box;
+}
+
+.infoColumn p {
+  margin-bottom: 10px;
+}
+
+.infoColumn p span {
+  margin-bottom: 10px;
+  color: #93c11f;
+}
+
+.infoColumn strong {
+  font-weight: 500;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-evenly; // Zmieniamy na space-evenly, aby przyciski były bliżej siebie
+  margin-top: 20px;
+}
+
+.changeProfile,
+.deleteAccount {
+  padding: 15px 25px; // Zwiększamy padding dla większych przycisków
+  border: none;
+  border-radius: 10px; // Zwiększamy zaokrąglenie krawędzi
+  cursor: pointer;
+  width: 40%;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease; // Dodajemy płynne przejścia dla wszystkich właściwości
+}
+
+.changeProfile {
+  background-color: #3498db;
+}
+
+.deleteAccount {
+  background-color: red;
+}
+
+.changeProfile:hover,
+.deleteAccount:hover {
+  transform: scale(1.05); // Powiększamy przycisk o 5% po najechaniu
+}
