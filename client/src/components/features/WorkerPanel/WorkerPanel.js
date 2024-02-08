@@ -5,6 +5,8 @@ import styles from './WorkerPanel.module.scss'; // Importuj plik ze stylami SCSS
 import Banner from '../../pages/Banner/Banner';
 import Footer from '../../layouts/Footer/Footer';
 import NavBar from '../../layouts/NavBar/NavBar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faCalendar, faChartBar, faFile } from '@fortawesome/free-solid-svg-icons';
 
 const WorkerPanel = () => {
   const { login } = useParams();
@@ -30,12 +32,23 @@ const WorkerPanel = () => {
               <img src={worker.zdjecie} alt="Zdjęcie pracownika" />
             </div>
             <div className={styles.infoColumn}>
-              <p><strong>Imię:</strong> <span>{worker.imie}</span></p>
-              <p><strong>Nazwisko:</strong> <span>{worker.nazwisko}</span></p>
-              <p><strong>Wiek:</strong> <span>{worker.wiek}</span></p>
-              <p><strong>Płaca na godzinę:</strong> <span>{worker.placa_na_godzine}</span></p>
-              <p><strong>Stanowisko:</strong> <span>{worker.stanowisko}</span></p>
-              <p><strong>Pozostało dni urlopu:</strong> <span>{worker.dni_urlopu}</span></p>
+              <div><FontAwesomeIcon icon={faUser} /> <strong>Imię:</strong> <span>{worker.imie}</span></div>
+              <div><FontAwesomeIcon icon={faUser} /> <strong>Nazwisko:</strong> <span>{worker.nazwisko}</span></div>
+              <div className={styles.barrier} />
+              <div><FontAwesomeIcon icon={faCalendar} /> <strong>Wiek:</strong> <span>{worker.wiek}</span></div>
+              <div className={styles.barrier} />
+              <div><FontAwesomeIcon icon={faChartBar} /> <strong>Stanowisko:</strong> <span>{worker.stanowisko}</span></div>
+              {worker.placa_na_godzine !== null && (
+                <div><FontAwesomeIcon icon={faChartBar} /> <strong>Płaca na godzinę:</strong> <span>{worker.placa_na_godzine}zł</span></div>
+              )}
+              {worker.placa_nominalna !== null && (
+                <div><FontAwesomeIcon icon={faChartBar} /> <strong>Płaca nominalna:</strong> <span>{worker.placa_nominalna}zł</span></div>
+              )}
+              <div><FontAwesomeIcon icon={faChartBar} /> <strong>Płaca zwiększona dnia:</strong> <span>{worker.zwiekszona_placa}</span></div>
+              <div className={styles.barrier} />
+              <div><FontAwesomeIcon icon={faFile} /> <strong>Umowa na:</strong> <span>{worker.umowa_na}</span></div>
+              <div><FontAwesomeIcon icon={faFile} /> <strong>Umowa do:</strong> <span>{worker.umowa_do}</span></div>
+              <div><FontAwesomeIcon icon={faFile} /> <strong>Umowa podpisana dnia:</strong> <span>{worker.umowa_podpisana}</span></div>
               <div className={styles.buttonContainer}>
                 <button className={styles.changeProfile}>EDYTUJ PROFIL</button>
                 <button className={styles.deleteAccount}>USUŃ PROFIL</button>

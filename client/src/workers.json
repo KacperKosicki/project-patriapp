@@ -8,9 +8,13 @@
         "nazwisko": "Kosicki",
         "zdjecie": "/images/workers/ja.jpg",
         "wiek": 22,
+        "placa_nominalna": null,
         "placa_na_godzine": 27.80,
+        "zwiekszona_placa": "1 styczeń 2024",
         "stanowisko": "Operator maszyn i urządzeń do obróbki drewna",
-        "dni_urlopu": 10
+        "umowa_do": "xx.x.xxxxr.",
+        "umowa_na": "Patria-Top",
+        "umowa_podpisana": "xxxx"
     },
     { 
         "login": "celina.snella", 
@@ -21,9 +25,13 @@
         "nazwisko": "Snella",
         "zdjecie": "/images/workers/ja.jpg",
         "wiek": 22,
-        "placa_na_godzine": "x",
+        "placa_nominalna": 4500,
+        "placa_na_godzine": null,
+        "zwiekszona_placa": "1 styczeń 2024",
         "stanowisko": "Specjalista ds. gospodarki magazynowej",
-        "dni_urlopu": 10
+        "umowa_do": "xx.x.xxxxr.",
+        "umowa_na": "Patria-Top",
+        "umowa_podpisana": "xxxx"
     },
     { 
         "login": "patryk.pikula", 
@@ -34,8 +42,12 @@
         "nazwisko": "Pikula",
         "zdjecie": "/images/workers/ja.jpg",
         "wiek": 22,
-        "placa_na_godzine": 29.70,
+        "placa_nominalna": null,
+        "placa_na_godzine": 29.80,
+        "zwiekszona_placa": "1 styczeń 2024",
         "stanowisko": "Operator maszyn i urządzeń do obróbki drewna",
-        "dni_urlopu": 10
+        "umowa_do": "xx.x.xxxxr.",
+        "umowa_na": "Patria-Top",
+        "umowa_podpisana": "xxxx"
     }
 ]

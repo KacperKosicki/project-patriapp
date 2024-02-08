@@ -39,25 +39,32 @@
 }
 
 .infoColumn {
-  border: 2px solid #ccc;
+  font-size: 20px;
+  border: 1px solid #ccc;
   border-radius: 10px;
   padding: 20px;
   width: 35%; // Zmniejszenie szerokości sekcji z informacjami
   box-sizing: border-box;
 }
 
+.barrier {
+  margin-bottom: 25px;
+}
+
 .infoColumn p {
   margin-bottom: 10px;
 }
 
-.infoColumn p span {
+.infoColumn strong {
   margin-bottom: 10px;
-  color: #93c11f;
 }
 
-.infoColumn strong {
+
+.infoColumn div span {
+  color: #93c11f;
   font-weight: 500;
 }
+
 
 .buttonContainer {
   display: flex;
